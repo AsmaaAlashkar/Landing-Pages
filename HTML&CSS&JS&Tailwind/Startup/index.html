@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Product — Modern Startup Landing</title>
+    <meta name="description"
+        content="Modern landing page for a tech product or app. Clean typography, clear features, and a strong Get Started CTA.">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* small utility for the scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity .6s ease, transform .6s ease
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: none
+        }
+
+        /* sticky offset for smooth scroll target */
+        :target {
+            scroll-margin-top: 80px
+        }
+    </style>
+</head>
+
+<body class="antialiased text-slate-800 bg-gradient-to-b from-white to-slate-50">
+
+    <!-- NAVBAR -->
+    <header class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur shadow-sm">
+        <div class="max-w-6xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-16">
+                <a href="#home" class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-semibold">
+                        <img src="assets/logo.png" alt="">
+                    </div>
+                    <div class="hidden sm:block">
+                        <div class="font-semibold">Product</div>
+                        <div class="text-xs text-slate-500">Modern app for teams</div>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="#features" class="text-sm hover:text-indigo-600">Features</a>
+                    <a href="#pricing" class="text-sm hover:text-indigo-600">Pricing</a>
+                    <a href="#newsletter" class="text-sm hover:text-indigo-600">Newsletter</a>
+                    <a href="#contact" class="text-sm hover:text-indigo-600">Contact</a>
+                    <a href="#get-started"
+                        class="ml-4 inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700">Get
+                        Started</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobileBtn" aria-label="Open menu" class="p-2 rounded-md hover:bg-slate-100">
+                        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile menu panel -->
+        <div id="mobileMenu" class="md:hidden hidden border-t bg-white">
+            <div class="px-6 py-4 flex flex-col gap-3">
+                <a href="#features" class="py-2">Features</a>
+                <a href="#pricing" class="py-2">Pricing</a>
+                <a href="#newsletter" class="py-2">Newsletter</a>
+                <a href="#contact" class="py-2">Contact</a>
+                <a href="#get-started"
+                    class="py-2 inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white rounded-md">Get
+                    Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="home" class="pt-20">
+        <!-- HERO -->
+        <section class="max-w-6xl mx-auto px-6 py-20 lg:py-28">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">Ship faster. Delight
+                        users.</h1>
+                    <p class="mt-4 text-lg text-slate-600">A modern product to help teams prototype, ship and measure
+                        with confidence. Built with speed, privacy and beautiful UX in mind.</p>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <a id="getStartedBtn" href="#get-started"
+                            class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-700">Get
+                            Started</a>
+                        <a href="#features"
+                            class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50">See
+                            Features</a>
+                    </div>
+
+                    <ul class="mt-6 flex flex-wrap gap-4 text-sm text-slate-500">
+                        <li class="flex items-center gap-2"><span
+                                class="inline-block w-2 h-2 bg-emerald-400 rounded-full"></span> Free 14-day trial</li>
+                        <li class="flex items-center gap-2"><span
+                                class="inline-block w-2 h-2 bg-emerald-400 rounded-full"></span> No credit card required
+                        </li>
+                        <li class="flex items-center gap-2"><span
+                                class="inline-block w-2 h-2 bg-emerald-400 rounded-full"></span> Trusted by small teams
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="relative">
+                    <div
+                        class="reveal rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-indigo-50 to-white">
+                        <img src="assets/product.png" alt="product screenshot"
+                            class="w-full h-[420px] object-cover block">
+                    </div>
+
+                    <!-- small feature badges -->
+                    <div class="absolute -bottom-6 left-6 flex gap-3">
+                        <div class="bg-white shadow rounded-lg px-3 py-2 text-sm">Analytics</div>
+                        <div class="bg-white shadow rounded-lg px-3 py-2 text-sm">Integrations</div>
+                        <div class="bg-white shadow rounded-lg px-3 py-2 text-sm">Realtime</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features" class="max-w-6xl mx-auto px-6 py-16">
+            <div class="text-center max-w-2xl mx-auto reveal">
+                <h2 class="text-2xl font-bold">Everything you need to build better</h2>
+                <p class="mt-3 text-slate-600">Powerful features that scale from prototype to production.</p>
+            </div>
+
+            <div class="mt-10 grid md:grid-cols-3 gap-6">
+                <article class="reveal p-6 bg-white rounded-xl shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-50 grid place-items-center text-indigo-600">⚡</div>
+                        <div>
+                            <h3 class="font-semibold">Fast setup</h3>
+                            <p class="mt-1 text-sm text-slate-600">Get started in minutes with clear docs and sensible
+                                defaults.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="reveal p-6 bg-white rounded-xl shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-50 grid place-items-center text-indigo-600">🔒</div>
+                        <div>
+                            <h3 class="font-semibold">Privacy-first</h3>
+                            <p class="mt-1 text-sm text-slate-600">We take data protection seriously — no unnecessary
+                                tracking.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="reveal p-6 bg-white rounded-xl shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-indigo-50 grid place-items-center text-indigo-600">🧩</div>
+                        <div>
+                            <h3 class="font-semibold">Plug & play</h3>
+                            <p class="mt-1 text-sm text-slate-600">Connect with the tools you already use via clean
+                                integrations.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CTA BAND -->
+        <section class="max-w-6xl mx-auto px-6 py-12">
+            <div
+                class="rounded-xl bg-indigo-600 text-white p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                    <h3 class="text-lg font-semibold">Ready to get started?</h3>
+                    <p class="text-sm text-indigo-100 mt-1">Create your account and start your free trial today.</p>
+                </div>
+                <div class="flex gap-3">
+                    <a href="#get-started"
+                        class="inline-flex items-center gap-2 px-5 py-3 bg-white text-indigo-600 rounded-md font-semibold">Get
+                        Started</a>
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 px-4 py-3 border border-white/30 rounded-md">Contact
+                        Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing (simple placeholder) -->
+        <section id="pricing" class="max-w-6xl mx-auto px-6 py-16">
+            <div class="text-center reveal">
+                <h2 class="text-2xl font-bold">Pricing</h2>
+                <p class="mt-2 text-slate-600">Simple pricing that grows with you.</p>
+            </div>
+
+            <div class="mt-8 grid md:grid-cols-3 gap-6">
+                <div class="reveal p-6 bg-white rounded-xl shadow text-center">
+                    <div class="text-sm font-semibold uppercase text-slate-500">Starter</div>
+                    <div class="mt-4 text-3xl font-bold">Free</div>
+                    <p class="mt-3 text-sm text-slate-600">Essential tools for getting started.</p>
+                    <button class="mt-6 px-4 py-2 bg-indigo-600 text-white rounded-md">Start free</button>
+                </div>
+                <div class="reveal p-6 bg-white rounded-xl shadow text-center border-2 border-indigo-50">
+                    <div class="text-sm font-semibold uppercase text-slate-500">Pro</div>
+                    <div class="mt-4 text-3xl font-bold">$29<span class="text-base font-medium">/mo</span></div>
+                    <p class="mt-3 text-sm text-slate-600">For growing teams and production apps.</p>
+                    <button class="mt-6 px-4 py-2 bg-indigo-600 text-white rounded-md">Choose Pro</button>
+                </div>
+                <div class="reveal p-6 bg-white rounded-xl shadow text-center">
+                    <div class="text-sm font-semibold uppercase text-slate-500">Enterprise</div>
+                    <div class="mt-4 text-3xl font-bold">Custom</div>
+                    <p class="mt-3 text-sm text-slate-600">Custom plan and SLA for large organizations.</p>
+                    <button class="mt-6 px-4 py-2 border border-slate-200 rounded-md">Contact</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="max-w-4xl mx-auto px-6 py-16">
+            <div class="bg-white rounded-xl shadow p-8 reveal">
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold">Join our newsletter</h3>
+                        <p class="mt-2 text-slate-600">Get product updates, design tips, and early access to features.
+                        </p>
+                    </div>
+                    <form id="newsletterForm" class="flex gap-3 w-full sm:w-auto" onsubmit="return false;">
+                        <input id="newsletterEmail" type="email" placeholder="Your email" required
+                            class="px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-200" />
+                        <button id="subscribeBtn"
+                            class="px-4 py-3 bg-indigo-600 text-white rounded-lg">Subscribe</button>
+                    </form>
+                </div>
+                <div id="newsletterMsg" class="mt-4 text-sm text-emerald-600" style="display:none"></div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="max-w-6xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="reveal">
+                    <h3 class="text-2xl font-semibold">Talk to us</h3>
+                    <p class="mt-2 text-slate-600">Questions about features, pricing, or enterprise? We'd love to hear
+                        from you.</p>
+                    <ul class="mt-4 text-sm text-slate-600 space-y-2">
+                        <li>Email: hello@product.example</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Address: 123 Startup Lane, Tech City</li>
+                    </ul>
+                </div>
+
+                <form id="contactForm" class="reveal bg-white rounded-xl shadow p-6" onsubmit="return false;">
+                    <div class="grid grid-cols-1 gap-3">
+                        <input id="cname" type="text" placeholder="Your name" required
+                            class="px-4 py-3 rounded-lg border border-slate-200" />
+                        <input id="cemail" type="email" placeholder="Email" required
+                            class="px-4 py-3 rounded-lg border border-slate-200" />
+                        <textarea id="cmessage" rows="5" placeholder="Message"
+                            class="px-4 py-3 rounded-lg border border-slate-200"></textarea>
+                        <div class="flex justify-end">
+                            <button id="contactSubmit" class="px-4 py-2 bg-indigo-600 text-white rounded-lg">Send
+                                message</button>
+                        </div>
+                        <div id="contactMsg" class="text-sm text-emerald-600" style="display:none"></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t mt-12 py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center text-sm text-slate-600">© 2025 Product — Built with care</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
