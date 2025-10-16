@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
+    <title>Cafe</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="mark"><img src="images/logo.png" alt="" width="100%"></div>
+                <div>
+                    <div style="font-weight:700;color:#3b2b24">قهوة</div>
+                    <div style="font-size:12px;color:#8b6f60">Café</div>
+                </div>
+            </div>
+            <nav>
+                <a href="#menu">القائمة</a>
+                <a href="#about">عنّا</a>
+                <a href="#contact">تواصل</a>
+            </nav>
+        </header>
+        <section class="hero">
+            <div class="carousel" id="carousel">
+                <div class="slides" id="slides">
+                    <div class="slide" style="background-image:url('images/carousel-img1.jpg')"></div>
+                    <div class="slide" style="background-image:url('images/carousel-img2.jpg')"></div>
+                    <div class="slide" style="background-image:url('images/carousel-img3.jpg')"></div>
+                </div>
+                <div class="overlay"></div>
+                <div class="carousel-content">
+                    <h1>صباحك من عندنا أحلى</h1>
+                    <p>قهوة مُطحونة طازة، أكلات بيتية، وجو دافي يتذكرك بالبيت.</p>
+                    <div style="margin-top:12px">
+                        <a class="btn" href="#menu"
+                            style="border-radius: 10px; padding: 10px 14px; margin-left: 8px;">اطلع على القائمة</a>
+                        <a class="btn" href="#contact" style="border-radius: 10px; padding: 10px 14px;">احجز طاولة</a>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="arrow-btn" id="prev">▶</button> <!-- Swapped icons for RTL -->
+                    <button class="arrow-btn" id="next">◀</button> <!-- Swapped icons for RTL -->
+                </div>
+            </div>
+        </section>
+        <section id="menu" class="menu-section">
+
+
+            <div class="grid" id="menuGrid">
+                <!-- items with data-category -->
+                <div class="card" data-category="breakfast">
+                    <img src="images/أومليت بيض.jpg" alt="فطور بيض">
+                    <div class="card-body">
+                        <h3>أومليت بيض</h3>
+                        <div class="meta"><span>بيض، خضار، خبز</span><strong>60 ج.م</strong></div>
+                    </div>
+                </div>
+
+
+                <div class="card" data-category="drinks">
+                    <img src="images/اسبريسو.jpg" alt="اسبريسو">
+                    <div class="card-body">
+                        <h3>اسبريسو</h3>
+                        <div class="meta"><span>قهوة عربية محمصة</span><strong>30 ج.م</strong></div>
+                    </div>
+                </div>
+
+
+                <div class="card" data-category="dessert">
+                    <img src="images/كيك شوكولاتة.webp" alt="كيك">
+                    <div class="card-body">
+                        <h3>كيك شوكولاتة</h3>
+                        <div class="meta"><span>شوكولاتة غنية</span><strong>75 ج.م</strong></div>
+                    </div>
+                </div>
+
+
+                <div class="card" data-category="breakfast">
+                    <img src="images/بانكيك بالعسل.webp" alt="بانكيك">
+                    <div class="card-body">
+                        <h3>بانكيك بالعسل</h3>
+                        <div class="meta"><span>عسل طبيعي، فواكه</span><strong>85 ج.م</strong></div>
+                    </div>
+                </div>
+
+
+                <div class="card" data-category="drinks">
+                    <img src="images/شاي نعناع.jpg" alt="شاي عشبي">
+                    <div class="card-body">
+                        <h3>شاي نعناع</h3>
+                        <div class="meta"><span>أوراق نعناع طازجة</span><strong>25 ج.م</strong></div>
+                    </div>
+                </div>
+
+
+                <div class="card" data-category="dessert">
+                    <img src="images/بسكويت الزبدة.jpg" alt="بسكويت">
+                    <div class="card-body">
+                        <h3>بسكويت الزبدة</h3>
+                        <div class="meta"><span>طازج يومي</span><strong>20 ج.م</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2 style="font-family:'Playfair Display',serif">احجز أو ابعتلنا رسالة</h2>
+            <p>اكتب اسمك، موبايلك، وملخص الطلب — هنرد عليك قريبًا.</p>
+            <form id="contactForm" onsubmit="return false;">
+                <input id="name" placeholder="اسمك" required />
+                <input id="phone" placeholder="موبايل / بريد" required />
+                <textarea id="message" placeholder="تفاصيل الطلب / الحجز"></textarea>
+                <button class="submit" id="sendBtn">ارسل</button>
+            </form>
+            <div id="formMsg" style="margin-top:10px;color:green;display:none">تم الإرسال! هنتواصل معاك قريبًا.</div>
+        </section>
+
+
+        <footer>
+            © حقوق الطبع والنشر — Café & Homemade
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
